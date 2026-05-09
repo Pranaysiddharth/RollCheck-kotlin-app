@@ -1,0 +1,27 @@
+[versions]
+agp = "9.1.1"
+kotlin = "2.2.10"
+ksp = "2.3.6"
+compose-bom = "2024.12.01"
+room = "2.7.0-alpha11"
+
+[libraries]
+# Core
+androidx-core = "androidx.core:core-ktx:1.15.0"
+lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.8.7"
+activity-compose = "androidx.activity:activity-compose:1.9.3"
+navigation-compose = "androidx.navigation:navigation-compose:2.8.5"
+
+# Compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
